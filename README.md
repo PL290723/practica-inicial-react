@@ -24,13 +24,25 @@
 ## Registro de pruebas (Etapa básica)
 | Prueba | Resultado Esperado | Obtenido | Estado | Corrección (si aplica) |
 | :--- | :--- | :--- | :--- | :--- |
-| P01 Inicio | Se muestra Ana y la posición 1 de 3. | | | |
-| P02 Siguiente | Desde Ana, Siguiente muestra Luis y 2 de 3. | | | |
-| P03 Límite sup. | Desde María, Siguiente muestra Ana. | | | |
-| P04 Límite inf. | Desde Ana, Anterior muestra María. | | | |
-| P05 Aleatorio | Cambia a otra válida (repetir 10 veces). | | | |
-| P06 Un registro | Controles mantienen el registro, sin errores. | | | |
-| P07 Sin registros| Muestra mensaje sin controles. | | | |
-| P08 Ampliación | Navegación con los 5 objetos extra. | | | |
-| P09 Interfaz | 3 anchos, teclado y textos ajustados. | | | |
-| P10 Compilación | npm run build sin errores en consola. | | | |
+| P01 Inicio | Se muestra Ana y la posición 1 de 5. | Se muestra Ana y 1 de 5. | Aprobado | Ninguna. |
+| P02 Siguiente | Desde Ana, Siguiente muestra Luis y 2 de 5. | Muestra a Luis correctamente. | Aprobado | Ninguna. |
+| P03 Límite sup. | Desde el último, Siguiente muestra Ana. | Regresa a Ana. | Aprobado | Ninguna. |
+| P04 Límite inf. | Desde Ana, Anterior muestra al último. | Muestra a Sofía (último). | Aprobado | Ninguna. |
+| P05 Aleatorio | Cambia a otra válida (repetir 10 veces). | Selecciona sin repetir el actual. | Aprobado | Ninguna. |
+| P06 Un registro | Controles mantienen el registro, sin errores. | Probado temporalmente, sin error. | Aprobado | Ninguna. |
+| P07 Sin registros| Muestra mensaje sin controles. | Probado temporalmente, éxito. | Aprobado | Ninguna. |
+| P08 Ampliación | Navegación con los 5 objetos extra. | Recorre los 5 testimonios. | Aprobado | Ninguna. |
+| P09 Interfaz | 3 anchos, teclado y textos ajustados. | Funciona con Tab y es responsivo. | Aprobado | Ninguna. |
+| P10 Compilación | npm run build sin errores en consola. | Compila correctamente a dist. | Aprobado | Ninguna. |
+
+
+## Registro de pruebas (Ampliación autoplay)
+| Prueba | Resultado Esperado | Obtenido | Estado |
+| :--- | :--- | :--- | :--- |
+| A01 Activación | Reanudar inicia avances cada 5 seg. | Avanza automáticamente. | Aprobado |
+| A02 Pausa | Pausar mantiene el testimonio. | Se detiene en el actual. | Aprobado |
+| A03 Acción manual | Navegar detiene la reproducción. | Cambia y queda pausado. | Aprobado |
+| A04 Reanudación | Reanudar permite nuevos avances. | Reinicia el ciclo normal. | Aprobado |
+| A05 Límites | El último vuelve al primero. | Regresa a Ana. | Aprobado |
+| A06 Pocos datos | Cero o un registro no crea intervalo. | Probado temporalmente. | Aprobado |
+| A07 Limpieza | No se acumulan intervalos. | No hay aceleración de avance. | Aprobado |
